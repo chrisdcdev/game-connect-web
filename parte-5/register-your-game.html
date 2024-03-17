@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Usado para trabalhar o conteúdo dentro da "viewport" | relacionado a 
+    responsividade -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Mudando o ícone da aba -->
+    <link rel="icon" href="../assets/GC.svg" />
+
+    <!-- PEGANDO FONTE DO GOOGLE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- PEGANDO ICONES DO GOOGLE -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <title>GameConnect</title>
+
+    <!-- LINKANDO O SCRIPT JAVA SCRIPT -->
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <!-- PARTE 2 -->
+    <header>
+      <div class="logo">
+        <img src="../assets/logo.svg" alt="Logo" />
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="register-your-game.html">Registre seu jogo</a>
+            <div class="selected-item"></div>
+          </li>
+          <li>
+            <a href="registered-games.html" class="disabled"
+              >Jogos registrados</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="profile-container">
+        <img src="../assets/profile.png" alt="Profile" />
+        <div class="profile-informations">
+          <span>Christian Castro</span>
+          <div class="status">
+            <div class="status-icon"></div>
+            <span>Online</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- PARTE 3 -->
+    <main>
+      <form id="game-form">
+        <div class="section">
+          <span>DETALHES DO JOGO</span>
+          <span class="material-symbols-outlined"> keyboard_arrow_up </span>
+        </div>
+
+        <div style="display: flex; flex-direction: column">
+          <label for="game-name">Nome</label>
+          <input
+            id="game-name"
+            type="text"
+            required
+            placeholder="Qual o jogo você está jogando?"
+          />
+        </div>
+
+        <div style="display: flex; flex-direction: column">
+          <label for="game-description">Descrição</label>
+          <input
+            id="game-description"
+            type="text"
+            required
+            placeholder="Insira uma descrição"
+          />
+        </div>
+
+        <div style="display: flex; flex-direction: column">
+          <label for="game-image">URL da capa</label>
+          <input
+            id="game-image"
+            type="text"
+            required
+            placeholder="Insira a URL da capa"
+          />
+        </div>
+
+        <div style="display: flex; flex-direction: column">
+          <label for="game-genre">Gênero</label>
+          <input
+            id="game-genre"
+            type="text"
+            required
+            placeholder="Qual o gênero do jogo?"
+          />
+        </div>
+
+        <div style="display: flex; flex-direction: column">
+          <label for="game-mode">Modo de jogo</label>
+          <select id="game-mode" type="text" required>
+            <option value="">Selecione uma opção</option>
+            <option value="campanha">Campanha</option>
+            <option value="multiplayer">Multiplayer</option>
+            <option value="co-op">Cooperativo</option>
+          </select>
+        </div>
+
+        <div class="section">
+          <span>PROGRESSO E CONQUISTAS</span>
+          <span class="material-symbols-outlined"> keyboard_arrow_up </span>
+        </div>
+
+        <div style="display: flex; flex-direction: column">
+          <label for="game-platform">Número de troféus</label>
+          <input
+            id="game-platform"
+            type="number"
+            required
+            placeholder="Digite o número de troféus"
+          />
+        </div>
+
+        <div style="display: flex; flex-direction: column">
+          <label for="game-platform">Plataforma</label>
+          <input
+            id="game-trophies"
+            type="text"
+            placeholder="Em qual plataforma?"
+            required
+          />
+        </div>
+
+        <div class="submit-button-container">
+          <button onclick="handleSubmitForm()">Salvar dados</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
