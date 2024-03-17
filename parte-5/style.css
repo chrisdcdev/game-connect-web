@@ -190,6 +190,11 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  background: #15a033;
+  transition: 0.3s;
+}
+
 /* Estilização da barra de rolagem para navegadores WebKit */
 /* Estilo para a pista (track) */
 ::-webkit-scrollbar {
