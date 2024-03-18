@@ -224,6 +224,14 @@ button:hover {
   position: relative; /* Posição relativa para que o posicionamento absoluto funcione */
   border-radius: 10px; /* Bordas arredondadas */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+
+  transition: transform 0.3s ease; /* Adicionamos uma transição suave para o efeito */
+}
+
+.card:hover {
+  transform: scale(
+    1.05
+  ); /* Aumenta o tamanho do card em 5% ao passar o mouse sobre ele */
 }
 
 .card-overlay {
