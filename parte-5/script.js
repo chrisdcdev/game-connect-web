@@ -25,7 +25,7 @@ function getGameDataFromLocalStorage() {
   return storedData ? JSON.parse(storedData) : [];
 }
 
-// Função para criar e adicionar os cards ao componente
+// // Função para criar e adicionar os cards ao componente
 function renderGameCards() {
   var gamesArray = getGameDataFromLocalStorage();
   var gridContainer = document.querySelector(".grid-container");
@@ -37,8 +37,32 @@ function renderGameCards() {
   gamesArray.forEach(function (gameData) {
     var card = document.createElement("div");
     card.classList.add("card");
-    card.textContent = gameData.name; // Por exemplo, exibindo apenas o nome do jogo
-    card.t
+
+    // Configura a a sombra de sobreposição do card
+    card.style.backgroundImage = "url(" + gameData.image + ")";
+
+    // Cria e configura a div de sobreposição
+    var cardOverlay = document.createElement("div");
+    cardOverlay.classList.add("card-overlay");
+    card.appendChild(cardOverlay);
+
+    // Adiciona o nome do jogo ao card
+    var gameName = document.createElement("span");
+    gameName.classList.add("game-name");
+    gameName.textContent = gameData.name;
+    card.appendChild(gameName);
+
+    // Adiciona o gênero do jogo ao card
+    var gameGenre = document.createElement("span");
+    gameGenre.classList.add("game-genre");
+    gameGenre.textContent = gameData.genre;
+    card.appendChild(gameGenre);
+
+    // Adiciona a plataforma do jogo ao card
+    var gamePlatform = document.createElement("span");
+    gamePlatform.classList.add("game-platform");
+    gamePlatform.textContent = gameData.platform;
+    card.appendChild(gamePlatform);
 
     // Adiciona o card ao gridContainer
     gridContainer.appendChild(card);
