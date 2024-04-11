@@ -19,7 +19,7 @@ function handleSubmitForm() {
   document.getElementById("game-form").reset();
 }
 
-// Função para obter o array do localStorage
+// Função para obter o array do localStorage teste teste
 function getGameDataFromLocalStorage() {
   var storedData = localStorage.getItem("gameData");
   return storedData ? JSON.parse(storedData) : [];
